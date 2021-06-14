@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>smart-svg example</title>
+        <script src="/dist-browser/smart-icon-webcomponent.iife.min.js"></script>
+        <script>
+            SmartIcon.define("my-custom-icon", {
+                adapter: SmartIcon.SVGUseAdapter,
+                resolvePath: (name) => `/example/${name}.svg#icon`,
+                aliases: {
+                    code: "braces",
+                    "table-sort": "sort",
+                },
+            });
+        </script>
+        <style>
+            my-custom-icon {
+                width: 60px;
+                height: 60px;
+                display: inline-block;
+            }
+        </style>
+    </head>
+
+    <body>
+        <my-custom-icon name="code"></my-custom-icon>
+        <my-custom-icon name="table-sort"></my-custom-icon>
+        <my-custom-icon name="activity"></my-custom-icon>
+    </body>
+</html>
