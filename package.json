@@ -3,11 +3,17 @@
     "version": "0.0.1",
     "description": "",
     "files": [
-        "dist-browser"
+        "dist-browser",
+        "dist-module",
+        "dist-types"
     ],
+    "module": "dist-module/smart-icon.mjs",
+    "types": "dist-types/index.d.ts",
     "scripts": {
-        "build": "npm run build:iife",
-        "build:iife": "esbuild src/index.ts --bundle --minify --sourcemap --format=iife --global-name=SmartIcon --outfile=dist-browser/smart-icon-webcomponent.iife.min.js",
+        "build": "npm run build:iife && npm run build:esm && npm run build:types",
+        "build:iife": "esbuild src/index.ts --bundle --minify --sourcemap --format=iife --global-name=SmartIcon --outfile=dist-browser/smart-icon.iife.min.js",
+        "build:esm": "esbuild src/index.ts --bundle --sourcemap --format=esm --outfile=dist-module/smart-icon.mjs",
+        "build:types": "tsc --emitDeclarationOnly --declaration --declarationMap false --declarationDir dist-types",
         "preexample": "npm run build",
         "example": "serve",
         "lint": "eslint src  --ext=ts",
