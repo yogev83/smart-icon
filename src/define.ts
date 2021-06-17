@@ -9,7 +9,21 @@ type DefineResult = {
 
 type DefineFn = (componentName: string, options: DefineOptions) => DefineResult;
 
+const createdElems: Record<string, DefineResult> = {};
+
 export const define: DefineFn = (componentName, options) => {
+    if (window.customElements.get(componentName)) {
+        if (createdElems[componentName]) {
+            console.error(
+                `smart-icon: \`${componentName}\` is already defined. If you need to update the configuration, you can use the update function instead. This error may show when used in a hot-reload development environment; to fix it you can check if the element has been already been defined before calling SmartIcon.define.`
+            );
+            return createdElems[componentName];
+        }
+        throw new Error(
+            `smart-icon: \`${componentName}\` has already been defined. Please choose another name.`
+        );
+    }
+
     const config: SmartIconOptions = {
         resolvePath: options.resolvePath,
         aliases: options.aliases || {},
@@ -23,7 +37,7 @@ export const define: DefineFn = (componentName, options) => {
 
     window.customElements.define(componentName, options.adapter(config, eventBus));
 
-    return {
+    const result: DefineResult = {
         update: (options) => {
             const opts = typeof options === "function" ? options(config) : options;
 
@@ -35,4 +49,8 @@ export const define: DefineFn = (componentName, options) => {
             triggerUpdate();
         },
     };
+
+    createdElems[componentName] = result;
+
+    return result;
 };
