@@ -17,7 +17,8 @@
         "preexample": "npm run build",
         "example": "serve",
         "lint": "eslint src  --ext=ts",
-        "typecheck": "tsc --noEmit"
+        "prepack": "npm run build",
+        "ts": "tsc --noEmit"
     },
     "license": "Apache-2.0",
     "devDependencies": {
