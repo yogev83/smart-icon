@@ -1,8 +1,12 @@
 {
     "name": "smart-icon",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "A hot swappable icon loader for design systems",
-    "keywords": ["svg", "sprite", "icon"],
+    "keywords": [
+        "svg",
+        "sprite",
+        "icon"
+    ],
     "files": [
         "dist-browser",
         "dist-module",
