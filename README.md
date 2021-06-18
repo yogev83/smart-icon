@@ -36,7 +36,7 @@ A generic component library should strive to integrate well into any existing de
 ## Adapters
 
 ### SVGUseAdapter
-This adapter is great for loading SVGs directly into the DOM by leveraging the `<use />` element. This allows icons to be stylable via CSS, such as changing the fill color on hover for example. It’s flexible with both SVG sprite sheets or (preferably for performance reasons) standalone SVG icons.
+This adapter is great for loading SVGs directly into the DOM by leveraging the `<use />` element. It allows icons to be stylable via CSS, such as changing the fill color on hover for example, and is flexible with both SVG sprite sheets or (preferably for performance reasons) standalone SVG icons.
 
 ## Alternatives
 
