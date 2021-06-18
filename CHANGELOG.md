@@ -1,3 +1,15 @@
+# [1.0.0](https://github.com/erictooth/smart-icon/compare/v0.2.1...v1.0.0) (2021-06-18)
+
+
+### chore
+
+* **release:** release 1.0.0 ([a63ea13](https://github.com/erictooth/smart-icon/commit/a63ea1303c49e55703f6ea5f407c59ca3c335c0d))
+
+
+### BREAKING CHANGES
+
+* **release:** release 1.0.0
+
 ## [0.2.1](https://github.com/erictooth/smart-icon/compare/v0.2.0...v0.2.1) (2021-06-18)
 
 
