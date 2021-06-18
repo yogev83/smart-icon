@@ -1,7 +1,7 @@
 {
     "name": "smart-icon",
     "version": "0.2.1",
-    "description": "A hot swappable icon loader for design systems",
+    "description": "A hot-swappable icon loader for component libraries and themeable apps",
     "keywords": [
         "svg",
         "sprite",
