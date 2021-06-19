@@ -17,16 +17,14 @@
 ```jsx
 import { define, SVGUseAdapter } from "smart-icon";
 
-define("smart-icon", {
+// Define your icon name and configuration
+define("my-icon", {
     adapter: SVGUseAdapter,
     resolvePath: (name) => `/icons/${name}.svg#icon`
 });
 
-function App() {
-    return <p>Hello <smart-icon name="world"></smart-icon></p>
-}
-
-ReactDOM.render(<App />, document.getElementById("#root");
+// Render it
+<p>Hello <my-icon name="world"></my-icon></p>
 ```
 
 ## Why
