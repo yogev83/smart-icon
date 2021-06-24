@@ -12,6 +12,7 @@
         "dist-module",
         "dist-types"
     ],
+    "unpkg": "dist-browser/smart-icon.iife.min.js",
     "module": "dist-module/smart-icon.mjs",
     "types": "dist-types/index.d.ts",
     "scripts": {
