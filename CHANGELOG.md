@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/erictooth/smart-icon/compare/v1.0.0...v1.0.1) (2021-06-24)
+
+
+### Bug Fixes
+
+* **build:** add unpkg field ([2ed97b0](https://github.com/erictooth/smart-icon/commit/2ed97b09da23bac12b2ccce0df486b19550b5603))
+
 # [1.0.0](https://github.com/erictooth/smart-icon/compare/v0.2.1...v1.0.0) (2021-06-18)
 
 
