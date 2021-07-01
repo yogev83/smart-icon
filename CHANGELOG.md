@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/erictooth/smart-icon/compare/v1.0.1...v1.1.0) (2021-07-01)
+
+
+### Features
+
+* export BaseAdapter to facilitate creation of custom adapters ([8028d88](https://github.com/erictooth/smart-icon/commit/8028d88937dda9f6cd2f0ef71dd8cc40f4e847a4))
+
 ## [1.0.1](https://github.com/erictooth/smart-icon/compare/v1.0.0...v1.0.1) (2021-06-24)
 
 
