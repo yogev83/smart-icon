@@ -1,7 +1,7 @@
 import { Events } from "./events";
 import { SmartIconOptions, EventBus } from "./types";
 
-export const SmartIcon = (config: SmartIconOptions, eventBus: EventBus) =>
+export const BaseAdapter = (config: SmartIconOptions, eventBus: EventBus) =>
     class SmartIcon extends HTMLElement {
         constructor() {
             super();

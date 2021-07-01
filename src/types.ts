@@ -1,4 +1,4 @@
-import { SmartIcon } from "./SmartIcon";
+import { BaseAdapter } from "./BaseAdapter";
 
 export type SmartIconOptions = {
     aliases: Record<string, string>;
@@ -6,7 +6,7 @@ export type SmartIconOptions = {
 };
 
 export type DefineOptions = {
-    adapter: typeof SmartIcon;
+    adapter: typeof BaseAdapter;
     aliases?: SmartIconOptions["aliases"];
     resolvePath: SmartIconOptions["resolvePath"];
 };
