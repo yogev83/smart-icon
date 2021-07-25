@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/erictooth/smart-icon/compare/v1.2.1...v1.3.0) (2021-07-25)
+
+
+### Features
+
+* add `querySelector` option to SVGFetchAdapter for CORS SVG sprite usage ([db5e4da](https://github.com/erictooth/smart-icon/commit/db5e4da59b914f6652415f0ace67dae0a9e89e6e))
+
 ## [1.2.1](https://github.com/erictooth/smart-icon/compare/v1.2.0...v1.2.1) (2021-07-25)
 
 
