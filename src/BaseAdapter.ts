@@ -27,24 +27,28 @@ export const BaseAdapter = (config: SmartIconOptions, eventBus: EventBus) =>
             return config.aliases[nameAttr] || nameAttr;
         }
 
-        generateTemplate?(): string;
-        update?(): void;
+        generateTemplate(): string | PromiseLike<string> {
+            return "";
+        };
+        update(): void | Promise<void> {
+            return;
+        };
 
-        connectedCallback() {
+        async connectedCallback() {
             if (!this.shadowRoot) {
                 return;
             }
-            this.shadowRoot.innerHTML = this.generateTemplate!();
-            eventBus.addEventListener(Events.UPDATED, this.update!);
+            this.shadowRoot.innerHTML = await this.generateTemplate();
+            eventBus.addEventListener(Events.UPDATED, this.update);
         }
 
         attributeChangedCallback(attrName: string): void {
             if (attrName === "name") {
-                this.update!();
+                this.update();
             }
         }
 
         disconnectedCallback(): void {
-            eventBus.removeEventListener(Events.UPDATED, this.update!);
+            eventBus.removeEventListener(Events.UPDATED, this.update);
         }
     };
