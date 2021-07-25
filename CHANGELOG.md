@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/erictooth/smart-icon/compare/v1.1.0...v1.2.0) (2021-07-25)
+
+
+### Features
+
+* add SVGFetchAdapter for loading icons from a cross-origin source ([5ac82d2](https://github.com/erictooth/smart-icon/commit/5ac82d2540020fdfb109a98709a5bffa5a0aa2d2))
+
 # [1.1.0](https://github.com/erictooth/smart-icon/compare/v1.0.1...v1.1.0) (2021-07-01)
 
 
