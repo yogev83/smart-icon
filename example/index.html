@@ -13,9 +13,19 @@
                     "table-sort": "sort",
                 },
             });
+
+            SmartIcon.define("fetch-icon", {
+                adapter: SmartIcon.SVGFetchAdapter(),
+                resolvePath: (name) => `/example/${name}.svg#icon`,
+                aliases: {
+                    code: "braces",
+                    "table-sort": "sort",
+                },
+            });
         </script>
         <style>
-            my-custom-icon {
+            my-custom-icon,
+            fetch-icon {
                 width: 60px;
                 height: 60px;
                 display: inline-block;
@@ -27,5 +37,7 @@
         <my-custom-icon name="code"></my-custom-icon>
         <my-custom-icon name="table-sort"></my-custom-icon>
         <my-custom-icon name="activity"></my-custom-icon>
+        <fetch-icon name="activity"></fetch-icon>
+        <fetch-icon name="table-sort"></fetch-icon>
     </body>
 </html>
