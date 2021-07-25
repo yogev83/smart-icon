@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/erictooth/smart-icon/compare/v1.2.0...v1.2.1) (2021-07-25)
+
+
+### Bug Fixes
+
+* add missing SVGFetchAdapter export ([bb29e89](https://github.com/erictooth/smart-icon/commit/bb29e8928ae686019afec51d068ac6074c0ad10a))
+
 # [1.2.0](https://github.com/erictooth/smart-icon/compare/v1.1.0...v1.2.0) (2021-07-25)
 
 
