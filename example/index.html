@@ -16,16 +16,27 @@
 
             SmartIcon.define("fetch-icon", {
                 adapter: SmartIcon.SVGFetchAdapter(),
-                resolvePath: (name) => `/example/${name}.svg#icon`,
+                resolvePath: (name) => `/example/${name}.svg`,
                 aliases: {
                     code: "braces",
                     "table-sort": "sort",
                 },
             });
+
+            SmartIcon.define("fa-icon", {
+                adapter: SmartIcon.SVGFetchAdapter({ querySelector: (name) => `#${name}` }),
+                resolvePath: (name) =>
+                    `https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/sprites/solid.svg`,
+                aliases: {
+                    "table-sort": "sort",
+                    activity: "heartbeat",
+                },
+            });
         </script>
         <style>
             my-custom-icon,
-            fetch-icon {
+            fetch-icon,
+            fa-icon {
                 width: 60px;
                 height: 60px;
                 display: inline-block;
@@ -34,10 +45,19 @@
     </head>
 
     <body>
+        <h2>SVGUseAdapter</h2>
         <my-custom-icon name="code"></my-custom-icon>
         <my-custom-icon name="table-sort"></my-custom-icon>
         <my-custom-icon name="activity"></my-custom-icon>
-        <fetch-icon name="activity"></fetch-icon>
+
+        <h2>SVGFetchAdapter (Individual Files)</h2>
+        <fetch-icon name="code"></fetch-icon>
         <fetch-icon name="table-sort"></fetch-icon>
+        <fetch-icon name="activity"></fetch-icon>
+
+        <h2>SVGFetchAdapter (Sprite)</h2>
+        <fa-icon name="code"></fa-icon>
+        <fa-icon name="table-sort"></fa-icon>
+        <fa-icon name="activity"></fa-icon>
     </body>
 </html>
