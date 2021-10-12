@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/erictooth/smart-icon/compare/v1.3.0...v1.4.0) (2021-10-12)
+
+
+### Features
+
+* **build:** add cjs build ([94d98b6](https://github.com/erictooth/smart-icon/commit/94d98b6d1cd5b32d4181167b3dec1da6c8a3fcd6))
+
 # [1.3.0](https://github.com/erictooth/smart-icon/compare/v1.2.1...v1.3.0) (2021-07-25)
 
 
