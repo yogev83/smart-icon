@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/erictooth/smart-icon/compare/v1.4.0...v1.4.1) (2021-10-14)
+
+
+### Bug Fixes
+
+* remove optional chaining since some builds do not fully support it yet ([225f3c1](https://github.com/erictooth/smart-icon/commit/225f3c1e846d99228db15e8cfc3b40f72a07f6af))
+
 # [1.4.0](https://github.com/erictooth/smart-icon/compare/v1.3.0...v1.4.0) (2021-10-12)
 
 
