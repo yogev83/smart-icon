@@ -9,7 +9,7 @@ export const SVGUseAdapter = (config: SmartIconOptions, eventBus: EventBus) =>
         }
 
         update()  {
-            if (!this.shadowRoot?.children[0]) {
+            if (!(this.shadowRoot && this.shadowRoot.children[0])) {
                 return;
             }
             const useElem = this.shadowRoot.getElementById("smart-icon__use")!;

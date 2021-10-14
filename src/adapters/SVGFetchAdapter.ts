@@ -21,11 +21,11 @@ export const SVGFetchAdapter =
                     .createContextualFragment(svgText)
                     .querySelector(options.querySelector(this.name));
 
-                const viewBox = fragment?.getAttribute("viewBox") || "";
+                const viewBox = (fragment && fragment.getAttribute("viewBox")) || "";
 
                 return `<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" ${
                     (viewBox && `viewBox="${viewBox}"`) || ""
-                }>${fragment?.innerHTML}</svg>`;
+                }>${(fragment && fragment.innerHTML) || null}</svg>`;
             }
             generateTemplate() {
                 return this.getSvgText();
