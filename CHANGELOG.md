@@ -1,3 +1,11 @@
+## [1.4.2](https://github.com/erictooth/smart-icon/compare/v1.4.1...v1.4.2) (2021-11-16)
+
+
+### Bug Fixes
+
+* **SVGFetchAdapter:** fix double update on initial render ([1bb3c9a](https://github.com/erictooth/smart-icon/commit/1bb3c9a23bd242795d14b526a46bb48db7d2b00e))
+* use `globalThis` instead of `window` to improve SSR support ([c8b8866](https://github.com/erictooth/smart-icon/commit/c8b886636a10cff675db34f1f0c226fc7f0f2f00))
+
 ## [1.4.1](https://github.com/erictooth/smart-icon/compare/v1.4.0...v1.4.1) (2021-10-14)
 
 
