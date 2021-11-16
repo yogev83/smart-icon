@@ -9,6 +9,8 @@ type DefineResult = {
 
 type DefineFn = (componentName: string, options: DefineOptions) => DefineResult;
 
+type GetFn = (componentName: string) => DefineResult;
+
 const createdElems: Record<string, DefineResult> = {};
 
 export const define: DefineFn = (componentName, options) => {
@@ -53,4 +55,11 @@ export const define: DefineFn = (componentName, options) => {
     createdElems[componentName] = result;
 
     return result;
+};
+
+export const getElement: GetFn = (componentName: string) => {
+    if (!globalThis.customElements.get(componentName) || !createdElems[componentName]) {
+        console.error(`smart-icon: \`${componentName}\` has not been defined`);
+    }
+    return createdElems[componentName];
 };
