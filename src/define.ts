@@ -15,7 +15,7 @@ export const define: DefineFn = (componentName, options) => {
     if (globalThis.customElements.get(componentName)) {
         if (createdElems[componentName]) {
             console.error(
-                `smart-icon: \`${componentName}\` is already defined. If you need to update the configuration, you can use the update function instead. This error may show when used in a hot-reload development environment; to fix it you can check if the element has been already been defined before calling SmartIcon.define.`
+                `smart-icon: \`${componentName}\` is already defined. If you need to update the configuration, you can use the update function instead. This error may show when used in a hot-reload development environment; to fix it you can check if the element has already been defined before calling SmartIcon.define.`
             );
             return createdElems[componentName];
         }
