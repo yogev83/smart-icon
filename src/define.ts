@@ -12,7 +12,7 @@ type DefineFn = (componentName: string, options: DefineOptions) => DefineResult;
 const createdElems: Record<string, DefineResult> = {};
 
 export const define: DefineFn = (componentName, options) => {
-    if (window.customElements.get(componentName)) {
+    if (globalThis.customElements.get(componentName)) {
         if (createdElems[componentName]) {
             console.error(
                 `smart-icon: \`${componentName}\` is already defined. If you need to update the configuration, you can use the update function instead. This error may show when used in a hot-reload development environment; to fix it you can check if the element has been already been defined before calling SmartIcon.define.`
@@ -35,7 +35,7 @@ export const define: DefineFn = (componentName, options) => {
         eventBus.dispatchEvent(new CustomEvent(Events.UPDATED));
     };
 
-    window.customElements.define(componentName, options.adapter(config, eventBus));
+    globalThis.customElements.define(componentName, options.adapter(config, eventBus));
 
     const result: DefineResult = {
         update: (options) => {
