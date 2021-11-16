@@ -30,10 +30,8 @@ export const SVGFetchAdapter =
             generateTemplate() {
                 return this.getSvgText();
             }
-            async update() {
-                if (this.shadowRoot) {
-                    this.shadowRoot.innerHTML = await this.generateTemplate();
-                }
-            }
+            update = async () => {
+                this.shadowRoot!.innerHTML = await this.generateTemplate();
+            };
         };
     };

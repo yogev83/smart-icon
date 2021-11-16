@@ -8,11 +8,8 @@ export const SVGUseAdapter = (config: SmartIconOptions, eventBus: EventBus) =>
             return `<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><use id="smart-icon__use" xlink:href="${href}" href="${href}" /></svg>`;
         }
 
-        update()  {
-            if (!(this.shadowRoot && this.shadowRoot.children[0])) {
-                return;
-            }
-            const useElem = this.shadowRoot.getElementById("smart-icon__use")!;
+        update = () => {
+            const useElem = this.shadowRoot!.getElementById("smart-icon__use")!;
             const href = this.getPath();
             useElem.setAttribute("xlink:href", href);
             useElem.setAttribute("href", href);

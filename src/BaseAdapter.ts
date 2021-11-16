@@ -29,21 +29,19 @@ export const BaseAdapter = (config: SmartIconOptions, eventBus: EventBus) =>
 
         generateTemplate(): string | PromiseLike<string> {
             return "";
-        };
-        update(): void | Promise<void> {
+        }
+
+        update = (): void | Promise<void> => {
             return;
         };
 
         async connectedCallback() {
-            if (!this.shadowRoot) {
-                return;
-            }
-            this.shadowRoot.innerHTML = await this.generateTemplate();
+            this.shadowRoot!.innerHTML = await this.generateTemplate();
             eventBus.addEventListener(Events.UPDATED, this.update);
         }
 
         attributeChangedCallback(attrName: string): void {
-            if (attrName === "name") {
+            if (this.shadowRoot && this.shadowRoot.children[0] && attrName === "name") {
                 this.update();
             }
         }
